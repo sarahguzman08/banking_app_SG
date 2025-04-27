@@ -1,7 +1,7 @@
 # banking_app_SG
 # Guzman Bank CLI Application
 
-A simple banking app built with Python.
+A banking app built with Python.
 
 # Features
 
@@ -15,5 +15,5 @@ A simple banking app built with Python.
 bash
 git clone https://github.com/sarahguzman08/banking_app_SG.git
 cd banking_app_SG
-pip install matplotlib
+pip3 install matplotlib
 python main.py

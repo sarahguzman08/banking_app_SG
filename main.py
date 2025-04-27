@@ -14,17 +14,20 @@ def show_menu():
     print("3. Exit")
 
 def main():
+    # Loop (while): Will continue showing the menu until the user chooses to exit
     while True:
         show_menu()
+        #Variables and expressions
         choice = input("Enter your choice (1-3): ")
-
+#Branching (if/else): this handles users selection
         if choice == "1":  # User will log in
             logged_in = auth.login() # User will attempt to log in
             if logged_in:
+                # Searches for an associated bank account
                 user_account = accounts.find_account_by_user(logged_in) # Finds the users associated bank account
                 if not user_account:
                     print("No account found for this user. Please create an account first.")
-                    continue  # goes back to main menu if no account exists
+                    continue  # Loop goes back to main menu if no account exists
 
 # When user logs in successfully this will display an account actions menu
                 while True:  
@@ -51,12 +54,13 @@ def main():
                             print("Invalid amount. Please enter a number.")
  # Shows a bar chart of the transaction history by withdraw and deposit                   
                     elif action_choice == "3":
+                        # Plotting using (matplotlib) to display the transaction bar chart
                         from plotting import plot_transactions
                         plot_transactions()  # shows chart!
 # Logs user our and returns to main menu 
                     elif action_choice == "4":
-                        print("Logging out...")
-                        break  # Exit account actions menu back to main menu
+                        print("Logging out...") #String output message
+                        break  # Loop Exits account actions menu back to main menu
 
                     else:
                         print("Invalid choice. Please enter 1, 2, 3, or 4.")
@@ -71,7 +75,7 @@ def main():
 
         elif choice == "3":  # Exit
             print("Thank you for using the Guzman Bank. Goodbye!")
-            break
+            break # Loop: exits the main loop
 
         else:
 # Handles invalid input at the main menu

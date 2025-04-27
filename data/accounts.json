@@ -1,0 +1,14 @@
+[
+    {
+        "account_id": "VKX2GKUY8I",
+        "user": "sg",
+        "balance": 8000.0,
+        "type": "CheckingAccount"
+    },
+    {
+        "account_id": "SI8TOF2C3G",
+        "user": "sd",
+        "balance": 4000.0,
+        "type": "CheckingAccount"
+    }
+]
